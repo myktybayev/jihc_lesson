@@ -1,3 +1,7 @@
 <resources>
+
     <string name="app_name">Registration</string>
+    <string name="zero_text">0</string>
+    <string name="welcome_to_college">Welcome to college</string>
+
 </resources>

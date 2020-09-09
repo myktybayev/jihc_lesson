@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/zero_text"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/llParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/btnStyle"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/btnStyle"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/btn9"
+            style="@style/btnStyle"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btnX"
+            style="@style/btnStyle"
+            android:text="X" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn4"
+            style="@style/btnStyle"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/btnStyle"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/btnStyle"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btnMinus"
+            style="@style/btnStyle"
+            android:text="-" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
