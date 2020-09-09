@@ -11,7 +11,8 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tv_result;
     Button btn7, btn8, btn9, btnX;
-    Button btn4, btn5, btn6, btnMinus;
+    Button btn4, btn5, btn6;
+    Button btnMinus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

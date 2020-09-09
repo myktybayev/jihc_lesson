@@ -33,14 +33,15 @@
             android:text="8" />
 
         <Button
-            android:id="@+id/btn9"
-            style="@style/btnStyle"
-            android:text="9" />
-
-        <Button
             android:id="@+id/btnX"
             style="@style/btnStyle"
             android:text="X" />
+
+
+        <Button
+            android:id="@+id/btn9"
+            style="@style/btnStyle"
+            android:text="9" />
 
     </LinearLayout>
 
