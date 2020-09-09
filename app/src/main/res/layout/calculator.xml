@@ -5,10 +5,22 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/tv_zapis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="0"
+        android:textColor="@color/grey"
+        android:textSize="20sp" />
+
+    <TextView
         android:id="@+id/tv_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="end"
+        android:layout_marginTop="30dp"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:text="@string/zero_text"
@@ -33,15 +45,16 @@
             android:text="8" />
 
         <Button
+            android:id="@+id/btn9"
+            style="@style/btnStyle"
+            android:text="9" />
+
+        <Button
             android:id="@+id/btnX"
             style="@style/btnStyle"
             android:text="X" />
 
 
-        <Button
-            android:id="@+id/btn9"
-            style="@style/btnStyle"
-            android:text="9" />
 
     </LinearLayout>
 
@@ -57,21 +70,23 @@
             android:text="4" />
 
         <Button
-            android:id="@+id/btn5"
-            style="@style/btnStyle"
-            android:text="5" />
-
-        <Button
-            android:id="@+id/btn6"
-            style="@style/btnStyle"
-            android:text="6" />
-
-        <Button
             android:id="@+id/btnMinus"
             style="@style/btnStyle"
             android:text="-" />
 
+        <Button
+            android:id="@+id/btnPlus"
+            style="@style/btnStyle"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btnCalc"
+            style="@style/btnStyle"
+            android:text="=" />
+
 
     </LinearLayout>
+
+
 
 </LinearLayout>
