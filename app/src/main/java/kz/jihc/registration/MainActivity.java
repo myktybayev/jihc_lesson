@@ -11,22 +11,16 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     TextView tv_result, tv_zapis;
-    Button btn7, btn8, btn9, btnX;
-    Button btn4, btnMinus, btnPlus;
+
+    Button btn4, btn7, btn8, btn9;
+    Button btnX, btnMinus, btnPlus, btnPlusMinus;
     Button btnCalc;
+
     String previousNumber, secondNumber;
     String operation = "";
     String allZapis = "";
+    boolean znak = false;
 
-    /*
-
-    previousNumber = 700
-    operation = +
-    currentNumber = 99
-    =
-    799
-
-     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         btn8 = findViewById(R.id.btn8);
         btn9 = findViewById(R.id.btn9);
         btnX = findViewById(R.id.btnX);
+        btnPlusMinus = findViewById(R.id.btnPlusMinus);
 
         btn4 = findViewById(R.id.btn4);
         btnCalc = findViewById(R.id.btnCalc);
@@ -57,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         onClickButton(btn7, "7");
         onClickButton(btn8, "8");
         onClickButton(btn9, "9");
+        onClickButton(btnPlusMinus, "+-");
 
         onClickOperationButton(btnPlus, "+");
         onClickOperationButton(btnMinus, "-");
@@ -80,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    
     public void onClickButtonCalc() {
         btnCalc.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
@@ -116,11 +112,24 @@ public class MainActivity extends AppCompatActivity {
 
                 String res = tv_result.getText().toString(); // 0
 
-                if (res.equals("0")) {
-                    res = text; // 7
-                } else {
-                    res += text; // res = res + text; res = 78
+                if(text.equals("+-") && !res.equals("0")){
+
+                    znak = !znak;
+                    /*
+                    1 click znak = !false = true
+                    2 click znak = !true = false
+                     */
+
+//                    res = znak? "-"+res : res.substring(1);
+
+                    if(znak) res = "-"+res;
+                    else res = res.substring(1, res.length()); // -123
+
                 }
+
+                else if (res.equals("0"))  res = text; // 7
+                else res = res + text; // res = res + text; res = 78
+
                 tv_result.setText(res); // 78
             }
         });

@@ -30,8 +30,38 @@
     <LinearLayout
         android:id="@+id/llParent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
         android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnClear"
+            style="@style/btnFunStyle"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/btnPlusMinus"
+            style="@style/btnFunStyle"
+            android:text="+/-" />
+
+        <Button
+            android:id="@+id/btnProcent"
+            style="@style/btnFunStyle"
+            android:text="%" />
+
+        <Button
+            android:id="@+id/btnDivide"
+            style="@style/btnFunStyle"
+            android:text="/" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp"
         android:orientation="horizontal">
 
         <Button
@@ -51,16 +81,15 @@
 
         <Button
             android:id="@+id/btnX"
-            style="@style/btnStyle"
+            style="@style/btnFunStyle"
             android:text="X" />
 
 
-
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
         android:layout_marginBottom="10dp"
         android:orientation="horizontal">
 
@@ -70,20 +99,70 @@
             android:text="4" />
 
         <Button
-            android:id="@+id/btnMinus"
             style="@style/btnStyle"
+            android:text="5" />
+
+        <Button
+            style="@style/btnStyle"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btnMinus"
+            style="@style/btnFunStyle"
             android:text="-" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/btnStyle"
+            android:text="1" />
+
+        <Button
+            style="@style/btnStyle"
+            android:text="2" />
+
+        <Button
+            style="@style/btnStyle"
+            android:text="3" />
 
         <Button
             android:id="@+id/btnPlus"
-            style="@style/btnStyle"
+            style="@style/btnFunStyle"
             android:text="+" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/btnStyle"
+            android:text="0" />
+
+        <Button
+            style="@style/btnStyle"
+            android:text="." />
+
+        <Button
+            style="@style/btnFunStyle"
+            android:text="-" />
 
         <Button
             android:id="@+id/btnCalc"
-            style="@style/btnStyle"
+            style="@style/btnFunStyle"
             android:text="=" />
-
 
     </LinearLayout>
 
