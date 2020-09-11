@@ -14,12 +14,13 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn4, btn7, btn8, btn9;
     Button btnX, btnMinus, btnPlus, btnPlusMinus;
-    Button btnCalc;
+    Button btnBack, btnCalc, btnTochka;
 
     String previousNumber, secondNumber;
     String operation = "";
     String allZapis = "";
     boolean znak = false;
+    boolean doubleClicked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
         btnCalc = findViewById(R.id.btnCalc);
         btnMinus = findViewById(R.id.btnMinus);
         btnPlus = findViewById(R.id.btnPlus);
-
+        btnBack = findViewById(R.id.btnBack);
+        btnTochka = findViewById(R.id.btnTochka);
     }
 
     public void initActions() {
@@ -53,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         onClickButton(btn8, "8");
         onClickButton(btn9, "9");
         onClickButton(btnPlusMinus, "+-");
+        onClickButton(btnBack, "back");
+        onClickButton(btnTochka, "tochka");
 
         onClickOperationButton(btnPlus, "+");
         onClickOperationButton(btnMinus, "-");
@@ -86,10 +90,18 @@ public class MainActivity extends AppCompatActivity {
                 secondNumber = tv_result.getText().toString();
                 allZapis += secondNumber;
                 int result = 0;
+                double result2 = 0;
 
                 switch (operation){
                     case "+":
-                        result = Integer.parseInt(previousNumber) + Integer.parseInt(secondNumber);
+
+                        if(doubleClicked){
+                            result2 = Double.parseDouble(previousNumber) + Double.parseDouble(secondNumber);
+                            tv_result.setText(""+result2);
+                        }else{
+                            result = Integer.parseInt(previousNumber) + Integer.parseInt(secondNumber);
+                            tv_result.setText(""+result);
+                        }
 
                         break;
 
@@ -100,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 tv_zapis.setText(allZapis);
-                tv_result.setText(Integer.toString(result));
             }
         });
     }
@@ -113,17 +124,20 @@ public class MainActivity extends AppCompatActivity {
                 String res = tv_result.getText().toString(); // 0
 
                 if(text.equals("+-") && !res.equals("0")){
-
                     znak = !znak;
-                    /*
-                    1 click znak = !false = true
-                    2 click znak = !true = false
-                     */
-
-//                    res = znak? "-"+res : res.substring(1);
 
                     if(znak) res = "-"+res;
                     else res = res.substring(1, res.length()); // -123
+
+                }else if(text.equals("back")){
+                    if(!res.equals("0")) {
+                        if (res.length() == 1) res = "0";
+                        else res = res.substring(0, res.length() - 1);
+                    }
+
+                }else if(text.equals("tochka")){
+                    res = res + "."; // 123.3 Double
+                    doubleClicked = true;
 
                 }
 
