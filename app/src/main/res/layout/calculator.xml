@@ -5,17 +5,6 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tv_zapis"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="end"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:text="0"
-        android:textColor="@color/grey"
-        android:textSize="20sp" />
-
-    <TextView
         android:id="@+id/tv_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -66,8 +55,16 @@
 
         <Button
             android:id="@+id/btn7"
-            style="@style/btnStyle"
-            android:text="7" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_background"
+            android:gravity="center"
+            android:text="7"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
 
         <Button
             android:id="@+id/btn8"

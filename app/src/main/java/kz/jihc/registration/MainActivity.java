@@ -32,9 +32,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /*
+    Plan:
+        1) Calculator button design
+        2) button design with styles
+        3) function xml method aty
+        4) addOnClickListener
+        5) log cat errors
+
+     */
+
     public void initViews() {
         tv_result = findViewById(R.id.tv_result);
-        tv_zapis = findViewById(R.id.tv_zapis);
         btn7 = findViewById(R.id.btn7);
         btn8 = findViewById(R.id.btn8);
         btn9 = findViewById(R.id.btn9);

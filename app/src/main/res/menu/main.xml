@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bantau"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Баптау"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/shigu"
+        android:icon="@drawable/ic_baseline_exit_to_app_24"
+        android:title="Шығу"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/baska"
+        android:title="Меню1"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/baska2"
+        android:title="Меню2"
+        app:showAsAction="never"/>
+
+</menu>

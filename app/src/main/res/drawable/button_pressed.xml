@@ -6,7 +6,6 @@
         </shape>
     </item>
 
-
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="10dp" />

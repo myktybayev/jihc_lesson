@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/iphone12Max"
+        android:title="iPhone 12 Pro Max"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/iphone12"
+        android:title="iPhone 12"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/iphone11Max"
+        android:title="iPhone 11 Max"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/iphone11"
+        android:title="iPhone 11"
+        app:showAsAction="never"/>
+
+</menu>
